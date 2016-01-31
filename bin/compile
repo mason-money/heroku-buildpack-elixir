@@ -41,6 +41,8 @@ install_hex
 install_rebar
 
 restore_app
+echo "Setting INCLUDE_PATH"
+export INCLUDE_PATH=${build_path}/include
 app_dependencies
 copy_hex
 compile_app
