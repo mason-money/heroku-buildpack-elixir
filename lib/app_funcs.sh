@@ -42,6 +42,10 @@ function app_dependencies() {
 
   cd $build_path
   output_section "Fetching app dependencies with mix"
+
+  export C_INCLUDE_PATH=${build_path}/include
+  export INCLUDE_PATH=${build_path}/include
+  export LIBRARY_PATH=${build_path}/lib
   mix deps.get --only $MIX_ENV || exit 1
 
   export GIT_DIR=$git_dir_value
