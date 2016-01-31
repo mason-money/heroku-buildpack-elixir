@@ -43,6 +43,11 @@ install_rebar
 restore_app
 echo "Setting INCLUDE_PATH"
 export INCLUDE_PATH=${build_path}/include
+ls -la $INCLUDE_PATH
+echo "Setting LIBRARY_PATH"
+export LIBRARY_PATH=${build_path}/lib
+ls -la $LIBRARY_PATH
+
 app_dependencies
 copy_hex
 compile_app
