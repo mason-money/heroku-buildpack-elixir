@@ -41,6 +41,9 @@ install_hex
 install_rebar
 
 restore_app
+echo "Setting C_INCLUDE_PATH"
+export C_INCLUDE_PATH=${build_path}/include
+ls -la $C_INCLUDE_PATH
 echo "Setting INCLUDE_PATH"
 export INCLUDE_PATH=${build_path}/include
 ls -la $INCLUDE_PATH
